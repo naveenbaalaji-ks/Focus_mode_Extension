@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <title>Focus Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Focus Analytics & Rewards</h1>
+        </header>
+
+        <div class="grid">
+            <div class="card pet-card">
+                <div id="dash-pet" class="big-pet">🥚</div>
+                <h2 id="dash-level">Level 1</h2>
+                <div class="xp-bar-container">
+                    <div id="xp-bar" class="xp-bar"></div>
+                </div>
+                <p id="dash-xp-text" class="text-muted">0 / 100 XP to next level</p>
+            </div>
+
+            <div class="card stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">Total Time Focused</span>
+                    <span id="dash-total-time" class="stat-value">0h 0m</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Current Streak</span>
+                    <span id="dash-streak" class="stat-value">0 🔥</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Sessions Completed</span>
+                    <span id="dash-sessions" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Focus Coins</span>
+                    <span id="dash-coins" class="stat-value" style="color: #fbbf24;">0 🪙</span>
+                </div>
+            </div>
+
+            <div class="card shop-card">
+                <h2>🛒 Custom Reward Shop</h2>
+                <div class="add-site-row">
+                    <input type="text" id="reward-name" placeholder="e.g. 1 Ep of Anime">
+                    <input type="number" id="reward-price" placeholder="Coins" style="width: 90px;">
+                    <button id="add-reward-btn">Add</button>
+                </div>
+                <ul id="shop-list" class="site-list"></ul>
+                <p id="shop-message" style="font-size: 13px; margin-top: 10px; font-weight: bold;"></p>
+            </div>
+
+            <div class="card gallery-card">
+                <h2>Evolution Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="pet-slot unlocked" id="pet-slot-1">
+                        <div class="pet-icon">🥚</div>
+                        <div class="pet-lvl">Lv 1</div>
+                    </div>
+                    <div class="pet-slot" id="pet-slot-3">
+                        <div class="pet-icon">🐣</div>
+                        <div class="pet-lvl">Lv 3</div>
+                    </div>
+                    <div class="pet-slot" id="pet-slot-6">
+                        <div class="pet-icon">🐥</div>
+                        <div class="pet-lvl">Lv 6</div>
+                    </div>
+                    <div class="pet-slot" id="pet-slot-10">
+                        <div class="pet-icon">🦅</div>
+                        <div class="pet-lvl">Lv 10</div>
+                    </div>
+                    <div class="pet-slot" id="pet-slot-15">
+                        <div class="pet-icon">🐉</div>
+                        <div class="pet-lvl">Lv 15</div>
+                    </div>
+                    <div class="pet-slot" id="pet-slot-20">
+                        <div class="pet-icon">🦄</div>
+                        <div class="pet-lvl">Lv 20</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card block-card">
+                <h2>🛡️ Blocked Websites</h2>
+                <div class="add-site-row">
+                    <input type="text" id="new-site" placeholder="e.g. twitter.com">
+                    <button id="add-site-btn">Add Site</button>
+                </div>
+                <ul id="site-list" class="site-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
